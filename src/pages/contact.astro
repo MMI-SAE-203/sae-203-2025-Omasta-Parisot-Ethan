@@ -1,8 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
 ---
 
 <Layout>
     <h1 class="text-4xl md:text-6xl font-bold font-spacemono text-white mt-10 mb-10 pl-6 lg:pl-24">Contact</h1>
+
+    <form class="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg mb-16">
+        <div class="mb-6">
+            <label for="first-name" class="block text-lg font-semibold text-gray-700">Prénom</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Écrivez votre prénom ici" class="w-full p-4 border border-gray-300 rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        </div>
+
+        <div class="mb-6">
+            <label for="last-name" class="block text-lg font-semibold text-gray-700">Nom</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Écrivez votre nom ici" class="w-full p-4 border border-gray-300 rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        </div>
+
+        <div class="mb-6">
+            <label for="email" class="block text-lg font-semibold text-gray-700">E-mail *obligatoire</label>
+            <input type="email" id="email" name="email" placeholder="Écrivez votre e-mail ici" class="w-full p-4 border border-gray-300 rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        </div>
+
+        <div class="mb-6">
+            <label for="subject" class="block text-lg font-semibold text-gray-700">Objet *obligatoire</label>
+            <input type="text" id="subject" name="subject" placeholder="Écrivez l'objet ici" class="w-full p-4 border border-gray-300 rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        </div>
+
+        <div class="mb-6">
+            <label for="message" class="block text-lg font-semibold text-gray-700">Message *obligatoire</label>
+            <textarea id="message" name="message" rows="6" placeholder="Écrivez votre message ici" class="w-full p-4 border border-gray-300 rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+        </div>
+
+        <div class="mb-6">
+            <button type="submit" class="w-full py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">Envoyer</button>
+        </div>
+    </form>
 </Layout>

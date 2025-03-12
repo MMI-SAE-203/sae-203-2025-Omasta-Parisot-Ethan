@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import ruepietonne from '../assets/media/ruepietonne.webp';
+import billetterie from '../assets/media/billetterie.webp';
+---
+
+<Layout>
+    <h1 class="text-4xl md:text-6xl font-bold font-spacemono text-white mt-10 mb-10 pl-6 lg:pl-24">Infos Pratiques</h1>
+    <h2 class="text-2xl md:text-4xl text-white font-bold font-spacemono mt-4 pl-6 lg:pl-24"> Du 29 au 31 août 2024 !</h2>
+    <p class="text-white font-mulish mt-8 pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto"> On projettera différents types de films d’horreur, qui dureront de 22h a 8h, toute la durée du festival pendant 3 jours à la rue piétonne de Montbéliard.</p>
+    <p class="text-white font-mulish mt-8 pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto"> Pour ce qui est de l'hébergement, vous pourrez profiter des hôtels et airbnb disponible au sein du centre-ville de Montbéliard, nous les avons privatisé en faveur de notre publics et vous disposerez d'une remise de 10% sur votre réservation grâce à votre billet du Festiv'Halloween ! </p>
+    <p class="text-white font-mulish mt-8 pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto"> Pour vous rendre au festival, vous pourrez user des bus prévu à cette occasion, ou aussi du covoiturage pour profiter du festival ensemble une fois arrivé !</p>
+    <Image 
+        src={ruepietonne} 
+        alt="Rue piétonne de Montbéliard" 
+        width={500} 
+        height={750} 
+        class="mx-auto pb-16"
+    />
+    <p class="text-white font-mulish mt-8 pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto"> Le tarif basique coûte 29,99€ pour avoir accès au festival les 3 jours</p>
+    <Image 
+        src={billetterie} 
+        alt="Billet du Festiv'Halloween" 
+        width={500} 
+        height={750} 
+        class="mx-auto pb-16"
+    />
+    <p class="text-white font-mulish mt-8 pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto"> Le tarif réservés aux étudiants et aux personnes de moins de 26 ans possède une réduction comparé au tarif basique ce qui le fait passé de 29,99€ à seulement 18,99€ !</p>
+</Layout>
