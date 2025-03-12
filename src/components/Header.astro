@@ -22,25 +22,28 @@ const currentPath = Astro.url.pathname;
   </button>
   <nav
     id="menu"
-    class="flex-1 px-6 py-12 flex justify-between mt-20 flex-col fixed z-10 inset-0 bg-indigo-50 visible opacity-100 max-lg:aria-hidden:invisible max-lg:aria-hidden:opacity-0 lg:mt-0 lg:flex-row lg:static lg:bg-transparent lg:py-6 lg:visible lg:opacity-100"
+    class="flex-1 px-6 py-12 flex justify-between mt-20 flex-col fixed z-10 inset-0 bg-[#232323] visible opacity-100 max-lg:aria-hidden:invisible max-lg:aria-hidden:opacity-0 lg:mt-0 lg:flex-row lg:static lg:bg-transparent lg:py-6 lg:visible lg:opacity-100"
     aria-hidden="true"
   >
     <ul class="flex flex-col gap-4 lg:flex-row">
       <li>
-        <a class={`block p-4 rounded-lg text-[#232323] ${currentPath === '/properties' ? 'text-indigo-600 font-bold max-lg:bg-indigo-100 max-lg:rounded-lg' : ''}`} 
-        href="/properties">Rent</a>
+        <a class={`block p-4 rounded-lg lg:text-[#232323] text-white ${currentPath === '/festival' ? 'text-indigo-600 font-bold max-lg:bg-indigo-100 max-lg:rounded-lg' : ''}`} 
+        href="/properties">Festival</a>
       </li>
       <li>
-        <a class="block p-4 rounded-lg text-[#232323]" href="/buy">Buy</a>
+        <a class="block p-4 rounded-lg lg:text-[#232323] text-white" href="/programme">Films</a>
       </li>
       <li>
-        <a class="block p-4 rounded-lg text-[#232323]" href="/sell">Sell</a>
+        <a class="block p-4 rounded-lg lg:text-[#232323] text-white" href="/activites">Activités</a>
       </li>
       <li>
-        <a class="block p-4 rounded-lg text-[#232323]" href="/manage">Manage property</a>
+        <a class="block p-4 rounded-lg lg:text-[#232323] text-white" href="/invites">Invités</a>
       </li>
       <li>
-        <a class="block p-4 rounded-lg text-[#232323]" href="/resources">Resources</a>
+        <a class="block p-4 rounded-lg lg:text-[#232323] text-white" href="/infos">Infos Pratiques</a>
+      </li>
+      <li>
+        <a class="block p-4 rounded-lg lg:text-[#232323] text-white" href="/contact">Contact</a>
       </li>
     </ul>
     <div class="flex items-center justify-center gap-4 px-4">
