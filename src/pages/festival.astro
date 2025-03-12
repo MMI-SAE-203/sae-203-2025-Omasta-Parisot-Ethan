@@ -1,8 +1,68 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
+import festimage1 from '../assets/media/image_5.webp';
+import abdel from '../assets/media/equipe_technique_1.webp';
+import paul from '../assets/media/equipe_technique_1_1.webp';
+import brandon from '../assets/media/equipe_technique_1_1_1.webp';
+import organisateur from '../assets/media/organisateur.webp';
 ---
 
 <Layout>
-    
-</Layout>
+    <h1 class="text-4xl md:text-6xl font-bold font-spacemono text-white mt-10 mb-10 pl-6 lg:pl-24">A propos</h1>
+    <h2 class="font-spacemono pl-6 lg:pl-24 text-white text-2xl mb-16"> Bienvenue au Festiv’Halloween</h2>
+    <p class="text-white font-mulish pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto">
+        Plongez dans l'univers mystérieux et envoûtant de notre festival, où la magie de la saison rencontre des sensations fortes et des aventures inoubliables.
+        Chaque année, nous transformons Montbéliard en un royaume féerique peuplé de créatures mystérieuses, de décors saisissants et d'activités à couper le souffle.
+    </p>
+    <Image 
+        src={festimage1} 
+        alt="Affiche de festiv'halloween" 
+        width={500} 
+        height={750} 
+        class="mx-auto pb-16"
+    />
+    <h2 class="font-spacemono pl-6 lg:pl-24 text-white text-2xl mb-16"> Notre Vision</h2>
+    <p class="text-white font-mulish pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto">
+        Nous croyons en l’importance de réunir les gens autour d’un événement festif qui célèbre l’imagination, la créativité et les frissons. Notre mission est de créer un espace où petits et grands peuvent explorer leurs craintes et leurs rêves tout en partageant des moments inoubliables.
+    </p>
+    <h2 class="font-spacemono pl-6 lg:pl-24 text-white text-2xl mb-16"> Notre Équipe</h2>
+    <p class="text-white font-mulish pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto">
+        Nous avons le plaisir de vous présenter l’équipe technique qui se cache derrière la magie du festiv'Halloween. Ces professionnels passionnés mettent leur expertise et leur énergie au service de cet événement unique.
+    </p>
+    <ul>
+        <li class="font-mulish pl-6 lg:pl-24 text-white mb-16 lg:max-w-[1100px]">Brandon Smith : En tant que responsable technique, Brandon veille au bon déroulement de chaque étape du festival. Sa rigueur et son expérience sont des atouts précieux pour coordonner l'ensemble des opérations techniques.</li>
+        <Image 
+        src={brandon} 
+        alt="photo de Brandon Smith" 
+        width={500} 
+        height={750} 
+        class="mx-auto pb-16"
+        />
+        <li class="font-mulish pl-6 lg:pl-24 text-white mb-16 lg:max-w-[1100px]">Paul Grosjean : Spécialiste en gestion de la production, Paul assure le bon fonctionnement des installations et des équipements tout au long de l’événement. Son souci du détail et son efficacité font de lui un membre incontournable de l’équipe.</li>
+        <Image 
+        src={paul} 
+        alt="photo de Paul Grosjean" 
+        width={500} 
+        height={750} 
+        class="mx-auto pb-16"
+        />
+        <li class="font-mulish pl-6 lg:pl-24 text-white mb-16 lg:max-w-[1100px]">Abd Elkrim Zouhairi : En charge des aspects logistiques et techniques, Abd Elkrim est l’architecte des coulisses du festiv'Halloween. Il garantit une coordination sans faille entre les différents départements, permettant ainsi à l'événement de se dérouler dans les meilleures conditions.</li>
+        <Image 
+        src={abdel} 
+        alt="photo de Abd Elkrim Zouhairi" 
+        width={500} 
+        height={750} 
+        class="mx-auto pb-16"
+        />
+    </ul>
+    <p class="text-white font-mulish pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto"> Enfin, Kris Larimosklov, l’organisateur de l’événement, est la véritable force créatrice derrière ce festival. Avec sa vision et son enthousiasme, Kris a réussi à faire du festiv'Halloween un rendez-vous incontournable, où le divertissement et la créativité se rencontrent. Grâce à son leadership et sa passion pour l'événementiel, chaque édition du festiv'Halloween est une véritable réussite.</p>
+    <Image 
+        src={organisateur} 
+        alt="photo de Kris Larimosklov" 
+        width={500} 
+        height={750} 
+        class="mx-auto pb-16"
+    />
+    <p class="text-white font-mulish pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto"> Nous remercions chacun d'entre eux pour leur travail acharné et leur dévouement, car c'est grâce à eux que le festiv'Halloween continue de faire rêver petits et grands.    </p>
+ </Layout>
