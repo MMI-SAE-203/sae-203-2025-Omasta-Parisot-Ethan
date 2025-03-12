@@ -1,13 +1,113 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import affiche_film_d_horreur_1 from '../assets/media/affiche_film_d_horreur_1.webp';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Image } from 'astro:assets';
+import designer_4_1 from '../assets/media/designer_4_1.webp';
+import scream_1 from '../assets/media/scream_1.webp';
+import Button from '../components/Button.astro';
+import affiche1 from '../assets/media/affiche_film_d_horreur_1.webp';
+import designer_3_1 from '../assets/media/designer_3_1.webp';
+import montbeliard from '../assets/media/montb_liard_1.webp';
 ---
 
 <Layout>
-	<body>
-		<img src="{affiche_film_d_horreur_1}" alt="Image de ça chapitre II" class="w-full h-auto"/>
-	</body>
+	<section
+            class="relative w-full h-screen bg-orange-500 text-white flex items-center justify-center">
+            </div>
+            <div class="relative text-center max-w-3xl px-6">
+                <h1 class="text-4xl md:text-6xl font-bold font-spacemono">
+                    Bienvenue sur Festiv'Halloween
+                </h1>
+				<h2 class="text-2xl md:text-4xl font-bold font-spacemono mt-4">
+                    Du 29 au 31 Août 2025 !
+                </h2>
+                <p class="mt-4 text-lg md:text-xl font-mulish">
+                    Rejoignez-nous pour un festival d'Halloween unique, où frissons et sensations fortes seront au rendez-vous ! Pendant plusieurs jours, découvrez une sélection de films d'horreur culte, des activités effrayantes et des invités mystérieux.
+                </p>
+                <div class="mt-6 flex justify-center gap-4">
+                    <Button variant="dark" url="/films" text="Billetterie" />
+                </div>
+            </div>
+        </section>
+    <body class="flex justify-center items-center min-h-screen bg-gray-900">
+        <div class="flex justify-center items-center mt-8 mb-8 mr-4 ml-4 flex-col text-center">
+            <Image 
+                src={designer_4_1} 
+                alt="Affiche de festiv'halloween" 
+                width={500} 
+                height={750} 
+                class="mx-auto"
+            />
+            <h1 class="text-white text-3xl font-bold mt-8 font-spacemono">Notre Présentation</h1>
+            <p class="text-white font-mulish text-left mt-5 mb-5 lg:text-center lg:max-w-[600px]">Beaucoup d’entre nous aime regarder des films d’horreur. On aime avoir peur, se faire suspendre, ressentir une certaine tension tout au long du film,... C’est pourquoi nous avons décidé d’organiser un festival de films focalisé sur l’horreur et l’épouvante, pour faire plaisir à un grand nombre d’entre nous.</p>
+			<div class="flex items-center mt-8 mb-8">
+				<Image 
+					src={scream_1} 
+					alt="Affiche de Scream" 
+					width={200} 
+					class="mx-auto"
+				/>
+				<p class="font-mulish text-white ml-4 text-left lg:text-center lg:max-w-[600px]">
+					Il aura lieu pour la période d’halloween, afin d’être en harmonie avec l’ambiance de cette fête. Halloween sera un point avantageux pour notre festival, car il attirera beaucoup de monde.
+				</p>
+			</div>
+			<p class="text-white font-mulish text-left mt-5 mb-5 lg:text-center lg:max-w-[600px]">On projettera différents types de films d’horreur, qui dureront de 18h a 6h, toute la durée du festival pendant 3 jours à la rue piétonne de Montbéliard.</p>
+			<Image 
+                src={affiche1} 
+                alt="Affiche de Ça Chapitre 2" 
+                width={500} 
+                height={750} 
+                class="mx-auto"
+            />
+		</div>
+		<div class="flex flex-col items-start lg:items-center text-white px-6 md:px-16 lg:px-32 mt-8 mb-8 lg:max-w-[900px] mx-auto">
+			<h2 class="text-3xl font-bold font-spacemono text-left lg:text-center">Nos publics visés</h2>
+			<p class="font-mulish mt-4 text-left lg:text-center max-w-3xl">
+				Principalement les jeunes, car ce sont eux qui vont le plus au cinéma, et c’est aussi ceux qui regardent le plus de films d’horreur. Souvent entre amis, ils aiment se faire peur, et c’est aussi l’occasion pour eux de sortir le soir.
+			</p>
+			<p class="font-mulish mt-4 text-left lg:text-center max-w-3xl">
+				Les amateurs de films d’horreur. Ceux qui aiment et regardent souvent des thriller, des slasher, des gores, des épouvantes...
+			</p>
+			<p class="font-mulish mt-4 text-left lg:text-center max-w-3xl">
+				Les professionnels (ou pas encore), qui proposent leurs films ou viennent pour développer leurs cultures et s’en inspirer.
+			</p>
+		</div>
+		<div class="flex justify-center w-full mt-4">
+			<Image 
+				src={designer_3_1} 
+				alt="Personnes effrayées" 
+				width={500} 
+				height={750} 
+				class="px-4"
+			/>
+		</div>
+		<div class="flex justify-center items-center mt-8 mb-8 mr-4 ml-4 flex-col text-center">
+			<p class="text-left text-white font-mulish max-w-[350px] lg:max-w-[600px] lg:text-center">
+				Nous avons décidé d’organiser notre festival à Montbéliard. C’est une petite ville d’environ 25 000 habitants, mais elle est remplie d’étudiants et de jeunes avec un grand nombre d'écoles. D’autant plus qu’on retrouve des BTS d’audiovisuel, ce qui veut dire qu’il y a pas mal de monde qui connaissent et aiment le cinéma.
+			</p>
+			<Image 
+				src={montbeliard} 
+				alt="Montbéliard" 
+				width={500} 
+				height={750} 
+				class="px-4 mt-8 mb-8"
+			/>
+			<p class="text-left text-white font-mulish max-w-[350px] lg:max-w-[650px] lg:text-center mb-24">
+				Cela permettra aussi de rendre la ville plus attractive. Il n’y a pas un grand nombre d’évènements organisés dans cette ville, ce qui peut nous avantager et nous permettre d’avoir un grand nombre de spectateurs. De plus, Festiv’halloween permettra de mettre en avant le cinéma Le Colisée de Montbéliard.
+			</p>
+			<h3 class="font-mulish font-extrabold text-white"> Si vous vous êtes identifié à notre présentation, n’hésitez pas à acheter votre billet en cliquant sur ce bouton !</h3>
+		</div>
+		<div class="flex justify-center items-center mb-24">
+			<button class="flex items-center px-4 py-2 border-2 border-white text-white bg-orange-500 rounded-lg hover:bg-orange-600">
+			  <span>Cliquer ici</span>
+			  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2">
+				<path d="M10 18l6-6-6-6"></path>
+			  </svg>
+			</button>
+		</div>		  
+	</div>
+    </body>
 </Layout>
+
+
+
+
