@@ -1,26 +1,26 @@
 ---
-import { getActivityById, getAllActivities } from '../../../backend.mjs';
+import { getParticipantById, getAllParticipants } from '../../../backend.mjs';
 
 const { id } = Astro.params;
-const activity = await getActivityById(id);
+const invite = await getParticipantById(id);
 ---
 
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{activity.Titre_activites}</title>
+  <title>{invite.Nom_invite}{invite.Prenom_invite}</title>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="bg-gray-900 text-white">
   <div class="container mx-auto py-10">
-    <a href="/activites" class="text-blue-400 hover:underline">&larr; Retour aux activités</a>
+    <a href="/invites" class="text-blue-400 hover:underline">&larr; Retour aux activités</a>
     
     <div class="mt-6 max-w-4xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
-      <img src={`http://127.0.0.1:8090/api/files/Activites/${activity.id}/${activity.image_activites}`} alt={activity.Titre_activites} class="w-full h-96 object-cover rounded" />
-      <h1 class="text-3xl font-bold mt-4 font-irishgrover">{activity.Titre_activites}</h1>
-      <p class="text-gray-400">{activity.Date_activites}</p>
-      <p class="mt-4">{activity.Description_activites}</p>
+      <img src={`http://127.0.0.1:8090/api/files/Invites/${invite.id}/${invite.Photo_invite}`} alt={invite.Nom_invite && invite.Prenom_invite} class="w-full h-96 object-cover rounded" />
+      <h1 class="text-3xl font-bold mt-4 font-spacemono">{invite.Nom_invite} {invite.Prenom_invite}</h1>
+      <p class="text-gray-400">{invite.Email_invite}</p>
+      <p class="mt-4">{invite.Biographie_invite}</p>
     </div>
   </div>
 </body>
