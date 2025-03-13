@@ -33,15 +33,19 @@ export async function getParticipantById(id) {
     return await pb.collection('Invites').getOne(id);
 }
 
-export async function getActivitiesByAnimatorId(id) {
+export async function getAllActivitiesByAnimatorId(animatorId) {
     return await pb.collection('Activites').getFullList({
-        filter: `id_animateur = "${id}"`
+        filter: `Invites = '${animatorId}'`
     });
 }
 
-export async function getActivitiesByAnimatorName(Nom_invite) {
+export async function getAllActivitiesByAnimatorName(animatorName) {
+    const animators = await pb.collection('Invites').getFullList({
+        filter: `Nom_invite = '${animatorName}'`
+    });
+    if (animators.length === 0) return [];
     return await pb.collection('Activites').getFullList({
-        filter: `nom_animateur ~ "${Nom_invite}"`
+        filter: `Invites = '${animators[0].id}'`
     });
 }
 
@@ -52,3 +56,4 @@ export async function addOrUpdateItem(Collections, data) {
         return await pb.collection(Collections).create(data);
     }
 }
+

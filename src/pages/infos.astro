@@ -27,11 +27,41 @@ import billetterie from '../assets/media/billetterie.webp';
         class="mx-auto pb-16"
     />
     <p class="text-white font-mulish mt-8 pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto"> Le tarif réservés aux étudiants et aux personnes de moins de 26 ans possède une réduction comparé au tarif basique ce qui le fait passé de 29,99€ à seulement 18,99€ !</p>
-    <h2 class="text-2xl md:text-4xl text-white font-bold font-spacemono mt-4 pl-6 lg:pl-24"> Des questions ?</h2>
-    <h3 class="text-white text-xl font-mulish mt-8 pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto"> Est-ce que mon enfant à le droit de venir au festival avec nous ?</h3>
-    <p class="text-white font-mulish mt-8 pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto"> Oui, s'il est âgé d'au moins 16 ans, car nous diffusons uniquement des films d'au moins déconseillés aux moins de 16 et 18 ans.</p>
-    <h3 class="text-white text-xl font-mulish mt-8 pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto">Peut-on venir déguisé ? Y a-t-il un concours de costumes ? </h3>
-    <p class="text-white font-mulish mt-8 pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto"> Oui, c'est même avec plaisir que nous vous accueillierons dans votre meilleur costume car un défilé est prévu à la fin de chaque jour du festival pour élir le festivalier le plus effrayant !</p>
-    <h3 class="text-white text-xl font-mulish mt-8 pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto"> L’événement a-t-il lieu en cas de mauvais temps ? </h3>
-    <p class="text-white font-mulish mt-8 pl-6 lg:max-w-[900px] pb-16 lg:text-center lg:mx-auto"> Malheureusement non, ça ne sera pas possibe, c'est pour cette raison qu'il aura lieu en fin de période d'été. Pour que les festivaliers n'aient pas trop chaud et que la météo reste agréable. </p>
+    <h2 class="text-2xl md:text-4xl text-white font-bold font-spacemono mt-4 pl-6 lg:pl-24">Des questions ?</h2>
+
+    <div class="max-w-3xl mx-auto mt-8 space-y-4 mb-8">
+        <div x-data="{ open: false }" class="bg-gray-800 rounded-lg p-4">
+            <button @click="open = !open" class="flex justify-between items-center w-full text-left text-white font-mulish text-lg">
+                Est-ce que mon enfant a le droit de venir au festival avec nous ?
+                <svg :class="{ 'rotate-180': open }" class="w-5 h-5 transition-transform transform text-indigo-400" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </button>
+            <p x-show="open" x-transition class="mt-2 text-gray-300">
+                Oui, s'il est âgé d'au moins 16 ans, car nous diffusons uniquement des films déconseillés aux moins de 16 et 18 ans.
+            </p>
+        </div>
+        <div x-data="{ open: false }" class="bg-gray-800 rounded-lg p-4">
+            <button @click="open = !open" class="flex justify-between items-center w-full text-left text-white font-mulish text-lg">
+                Peut-on venir déguisé ? Y a-t-il un concours de costumes ?
+                <svg :class="{ 'rotate-180': open }" class="w-5 h-5 transition-transform transform text-indigo-400" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </button>
+            <p x-show="open" x-transition class="mt-2 text-gray-300">
+                Oui, nous vous accueillerons avec plaisir dans votre meilleur costume ! Un défilé est prévu à la fin de chaque jour du festival pour élire le festivalier le plus effrayant !
+            </p>
+        </div>
+        <div x-data="{ open: false }" class="bg-gray-800 rounded-lg p-4">
+            <button @click="open = !open" class="flex justify-between items-center w-full text-left text-white font-mulish text-lg">
+                L’événement a-t-il lieu en cas de mauvais temps ?
+                <svg :class="{ 'rotate-180': open }" class="w-5 h-5 transition-transform transform text-indigo-400" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </button>
+            <p x-show="open" x-transition class="mt-2 text-gray-300">
+                Malheureusement non, c'est pour cette raison qu'il a lieu en fin d'été, afin que la météo reste agréable sans être trop chaude.
+            </p>
+        </div>
+    </div>
 </Layout>
