@@ -1,5 +1,5 @@
 ---
-import { getFilmById, getAllFilms } from '../../../backend.mjs';
+import { getFilmById, getAllFilms } from '../../../backend/backend.mjs';
 
 const { id } = Astro.params;
 const film = await getFilmById(id);

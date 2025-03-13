@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getAllParticipants } from '../../../backend.mjs';
+import { getAllParticipants } from '../../../backend/backend.mjs';
 
 const invites = await getAllParticipants();
 ---

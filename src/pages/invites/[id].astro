@@ -1,5 +1,5 @@
 ---
-import { getParticipantById, getAllParticipants } from '../../../backend.mjs';
+import { getParticipantById, getAllParticipants } from '../../../backend/backend.mjs';
 
 const { id } = Astro.params;
 const invite = await getParticipantById(id);

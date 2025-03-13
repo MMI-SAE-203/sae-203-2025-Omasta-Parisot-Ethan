@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getAllActivities } from '../../../backend.mjs';
+import { getAllActivities } from '../../../backend/backend.mjs';
 
 const activities = await getAllActivities();
 ---
