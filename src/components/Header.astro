@@ -31,7 +31,7 @@ const currentPath = Astro.url.pathname;
         href="/festival">Festival</a>
       </li>
       <li>
-        <a class="block p-4 rounded-lg lg:text-[#232323] text-white" href="/programme">Films</a>
+        <a class="block p-4 rounded-lg lg:text-[#232323] text-white" href="/films">Films</a>
       </li>
       <li>
         <a class="block p-4 rounded-lg lg:text-[#232323] text-white" href="/activites">Activités</a>
@@ -54,17 +54,14 @@ const currentPath = Astro.url.pathname;
 </header>
 
 <script>
-  // On cible les éléments à modifier
   const toggle = document.querySelector("#menu-btn");
   const nav = document.querySelector("#menu");
   const page = document.body;
 
-  // Vérifier si les éléments existent avant d'ajouter l'événement
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
       const isOpen = toggle.ariaExpanded === "true";
       const isClosed = !isOpen;
-      // Mise à jour des attributs ARIA pour accessibilité
       toggle.ariaExpanded = String(isClosed);
       nav.ariaHidden = String(isOpen);
       page.classList.toggle("noscroll", isClosed);

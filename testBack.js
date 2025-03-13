@@ -1,5 +1,5 @@
 import { 
-    getAllFilms, getAllActivities, getAllParticipants, getFilmById, getActivityById, getParticipantById, getActivitiesByAnimatorId, getActivitiesByAnimatorName, addOrUpdateItem} from './backend.mjs';
+    getAllFilms, getAllActivities, getAllParticipants, getFilmById, getActivityById, getParticipantById, getActivitiesByAnimatorId, getActivitiesByAnimatorName, addOrUpdateItem} from '../sae-203-2025-Omasta-Parisot-Ethan/backend.mjs';
 
 try {
     const films = await getAllFilms();
