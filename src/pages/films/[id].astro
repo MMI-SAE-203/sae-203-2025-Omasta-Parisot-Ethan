@@ -17,7 +17,7 @@ const film = await getFilmById(id);
     <a href="/films" class="text-blue-400 hover:underline">&larr; Retour aux films</a>
     
     <div class="mt-6 max-w-4xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
-      <img src={`http://127.0.0.1:8090/api/files/Films/${film.id}/${film.Affiche_film}`} alt={film.Titre_film} class="w-full h-96 object-cover rounded" />
+      <img src={`https://sae203.ethan-omastaparisot.com/api/files/Films/${film.id}/${film.Affiche_film}`} alt={film.Titre_film} class="w-full h-96 object-cover rounded" />
       <h1 class="text-3xl font-bold mt-4 font-irishgrover">{film.Titre_film}</h1>
       <p class="text-gray-400">{film.Date_film}</p>
       <p class="mt-4">{film.Synopsis_film}</p>
